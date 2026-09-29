@@ -67,7 +67,6 @@ body {
     position: fixed;
     right: -125px;
     top: 500px;
-    /* AI Suggestion was used to input display: flex; */
     display: flex;
     gap: 25px;
     animation: rearDrive 2s linear infinite;
