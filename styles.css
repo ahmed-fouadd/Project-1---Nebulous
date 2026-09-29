@@ -1,0 +1,124 @@
+body {
+    background-color:black;
+}
+
+.outside-window {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.blurred-screen {
+    filter: blur(5px);
+    z-index: 1;
+}
+
+.car-window {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('car_window.png');
+    background-size: cover;
+    z-index: 2;
+}
+
+#headlight1 {
+    position:fixed;
+    top:50%;
+    left:450px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    filter: blur(8px);
+    animation: drive 3s infinite;
+}
+
+#headlight2 {
+    position:fixed;
+    top:50%;
+    left:550px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    filter: blur(8px);
+    animation: drive 3s infinite;
+}
+
+@keyframes drive {
+    from {
+        transform: scale(1) translateX(0);
+    }
+
+    to {
+        transform: scale(50) translateX(-200px);
+    }
+}
+
+.rear-lights {
+    position: fixed;
+    right: -125px;
+    top: 500px;
+    display: flex;
+    gap: 25px;
+    animation: rearDrive 2s linear infinite;
+}
+
+.rear-light {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: red;
+    filter: blur(8px);
+}
+
+@keyframes rearDrive {
+    from {
+        right: -125px;
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+
+    to {
+        right: 50%;
+        transform: translate(50%, -50%) scale(0.1);
+        opacity: 0;
+    }
+}
+
+.rain {
+    position: fixed;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.nebulous {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    opacity: 0.5;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-family: "Gochi Hand", cursive;
+    font-size: 150px;
+    letter-spacing: 5px;
+}
+
+.nebulous span {
+    color: white;
+    opacity: 0;
+    filter: blur(2px);
+    text-shadow: 0 0 10px white;
+    transition: opacity 0.4s, ease 2s, filter 0.4s;
+}
+
+.nebulous span:hover {
+    opacity: 1;
+    filter: blur(0);
+    transition: opacity 0.15s ease, filter 0.30s;
+}
