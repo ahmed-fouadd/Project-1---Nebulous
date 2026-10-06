@@ -116,7 +116,7 @@ body {
 .nebulous span {
     color: rgb(0, 0, 0);
     filter: blur(8px);
-    text-shadow: 0 0 10px rgb(3, 65, 10);
+    text-shadow: 0 0 10px rgb(252, 252, 252);
 }
 
 /* .nebulous span:hover {
